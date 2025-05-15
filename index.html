@@ -100,10 +100,12 @@
     <section id="bestilling">
       <h2 data-no>Bestill mat eller lokale</h2>
       <h2 data-ko style="display:none">음식 또는 장소 예약</h2>
-      <form>
-        <input type="text" placeholder="Navn / 이름" required>
-        <input type="email" placeholder="E-post / 이메일" required>
-        <textarea rows="5" placeholder="Skriv din bestilling eller spørsmål her / 주문 또는 질문을 여기에 적어주세요"></textarea>
+      <form action="https://formsubmit.co/kimchi@bork.no" method="POST">
+        <input type="text" name="navn" placeholder="Navn / 이름" required>
+        <input type="email" name="email" placeholder="E-post / 이메일" required>
+        <textarea name="melding" rows="5" placeholder="Skriv din bestilling eller spørsmål her / 주문 또는 질문을 여기에 적어주세요"></textarea>
+        <input type="hidden" name="_subject" value="Ny henvendelse fra nettsiden">
+        <input type="hidden" name="_captcha" value="false">
         <button type="submit">Send</button>
       </form>
     </section>
