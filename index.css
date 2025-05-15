@@ -9,6 +9,7 @@ header {
   background-color: #d84b4b;
   color: white;
   padding: 1rem;
+  padding-top: 2rem;
   text-align: center;
 }
 nav {
@@ -25,8 +26,17 @@ nav a {
 }
 .lang-switch {
   position: absolute;
-  top: 1rem;
+  top: 0rem;
   right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+.lang-switch button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
 main {
   padding: 1rem;
@@ -86,11 +96,4 @@ button:hover {
 }
 * {
   box-sizing: border-box;
-}
-
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
-@media (max-width: 800px) {
-  .flex-item-right, .flex-item-left {
-    flex: 100%;
-}
 }
