@@ -1,61 +1,11 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+  <title>Kimchi Arendal</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kim Chi Arendal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff8f6;
-      color: #333;
-    }
-    header {
-      background-color: #ff4d4d;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      background-color: #ffeaea;
-      padding: 0.5rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #ff4d4d;
-      font-weight: bold;
-    }
-    .lang-switch {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
-    main {
-      padding: 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    footer {
-      background-color: #ffeaea;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    form input, form textarea, form button {
-      width: 100%;
-      margin: 0.5rem 0;
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="icon.png">
+  <link rel="stylesheet" href="index.css">
   <script>
     function switchLang(lang) {
       document.querySelectorAll('[data-no]').forEach(el => {
@@ -73,30 +23,32 @@
     <button onclick="switchLang('ko')">한국어</button>
   </div>
   <header>
-    <h1 data-no>Kim Chi Arendal</h1>
+    <h1 data-no>Kimchi Arendal</h1>
     <h1 data-ko style="display:none">김치 아렌달</h1>
-    <p data-no>Autentisk koreansk mat i Arendal</p>
+    <p data-no>Autentisk koreansk mat og katering i Arendal</p>
     <p data-ko style="display:none">아렌달의 진짜 한국 음식</p>
   </header>
-  <nav>
-    <a href="#bestilling">Bestill</a>
+  <!--<nav>
     <a href="#info">Info</a>
+    <a href="#bestilling">Bestill</a>
     <a href="#kontakt">Kontakt</a>
-  </nav>
+  </nav-->
   <main>
     <section id="info">
-      <h2 data-no>Hva vi tilbyr</h2>
-      <h2 data-ko style="display:none">우리가 제공하는 것</h2>
+      <div class="info-content">
+        <img src="kimchi2.jpg" alt="kimchi" style="width:20vw;border-radius:10px;">
       <ul>
-        <li data-no>Hjemmelaget Kimchi og koreanske retter</li>
+        <h2 data-no>Hva vi tilbyr</h2>
+        <h2 data-ko style="display:none">우리가 제공하는 것</h2>
+        <li data-no>Hjemmelaget Kimchi og andre koreanske retter</li>
         <li data-ko style="display:none">집에서 만든 김치와 한국 요리</li>
         <li data-no>Utleie av lokale med koreansk mat</li>
         <li data-ko style="display:none">한국 음식을 포함한 장소 대여</li>
-        <li data-no>Katering til bryllup, konfirmasjon, bursdag mm.</li>
+        <li data-no>Katering til bryllup, konfirmasjon, bursdag eller andre samlinger</li>
         <li data-ko style="display:none">결혼식, 돌잔치, 생일 파티 등의 케이터링</li>
       </ul>
+    </div>
     </section>
-
     <section id="bestilling">
       <h2 data-no>Bestill mat eller lokale</h2>
       <h2 data-ko style="display:none">음식 또는 장소 예약</h2>
@@ -106,20 +58,22 @@
         <textarea name="melding" rows="5" placeholder="Skriv din bestilling eller spørsmål her / 주문 또는 질문을 여기에 적어주세요"></textarea>
         <input type="hidden" name="_subject" value="Ny henvendelse fra nettsiden">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://borkno.github.io/KimchiArendal/takk.html">
+        <input type="hidden" name="_next" value="takk.html">
         <button type="submit">Send</button>
       </form>
     </section>
-
     <section id="kontakt">
       <h2 data-no>Kontakt oss</h2>
       <h2 data-ko style="display:none">문의하기</h2>
-      <p data-no>Ring oss på: <strong>123 45 678</strong></p>
-      <p data-ko style="display:none">전화번호: <strong>123 45 678</strong></p>
+      <p data-no><strong>Telefon:</strong> 481 94 358</p>
+      <p data-ko style="display:none"><strong>전화번호:</strong> 481 94 358</p>
+      <p data-no>Vestre gate 9, 4836 Arendal</p>
+      <p data-ko style="display:none">Vestre gate 9, 4836 Arendal</p>
     </section>
+  </div>
   </main>
-  <footer>
-    <p data-no>&copy; 2025 Kim Chi Arendal. Alle rettigheter reservert.</p>
+  <footer class="flex-item-left">
+    <p data-no>&copy; 2025 Kimchi Arendal. Alle rettigheter reservert.</p>
     <p data-ko style="display:none">&copy; 2025 김치 아렌달. 모든 권리 보유.</p>
   </footer>
 </body>

@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <Title>
-            Phone
-        </Title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/x-icon" href="visual_studio.ico">
-        <link rel="stylesheet" href="index.css">
+<html lang="no">
+<head>
+  <title>Kimchi Arendal</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="visual_studio.ico">
+  <link rel="stylesheet" href="index.css">
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-no]').forEach(el => {
+        el.style.display = lang === 'no' ? 'block' : 'none';
+      });
+      document.querySelectorAll('[data-ko]').forEach(el => {
+        el.style.display = lang === 'ko' ? 'block' : 'none';
+      });
+    }
+  </script>
 </head>
-    <body>
-        <h1>Found my phone?</h1>
-        <div class="flex-container">
-            <div class="flex-item-left">You can contact me here<br><b>Telegram: </b><a href="https://t.me/borkboii">@borkboii</a><br><b>Email: </b><a href="mailto:mail@bork.no">mail@bork.no</a><br></div>
-            <div class="flex-item-right"><b>Name: </b>Birk Brox Walnum<br><b>Address: </b>Bråvannstoppen 51, 4624 Kristiansand, Norway</div>
-          </div>
-    </body>
+<body onload="switchLang('no')">
+  <div class="lang-switch">
+    <button onclick="switchLang('no')">Norsk</button>
+    <button onclick="switchLang('ko')">한국어</button>
+  </div>
+  <main>
+    <h2 data-no>Vi har mottatt din melding og vil svare innen kort tid.</h2>
+    <h2 data-ko style="display:none">Takk på koreansk</h2>
+  </main>
+  <footer>
+    <p data-no>&copy; 2025 Kimchi Arendal. Alle rettigheter reservert.</p>
+    <p data-ko style="display:none">&copy; 2025 김치 아렌달. 모든 권리 보유.</p>
+  </footer>
+</body>
 </html>
