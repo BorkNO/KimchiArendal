@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 header {
-  background-color: #d84b4b;
+  background: #b33434;
   color: white;
   padding: 1rem;
   padding-top: 2rem;
@@ -51,6 +51,7 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+  box-shadow: 0 50vh 0 50vh #ffeaea;
 }
 form input, form textarea, form button {
   width: 100%;
@@ -93,6 +94,10 @@ button {
 }
 button:hover {
   background-color: #ffffff;
+}
+img {
+  width: 20vw;
+  border-radius:10px;
 }
 * {
   box-sizing: border-box;
